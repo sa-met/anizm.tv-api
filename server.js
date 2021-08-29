@@ -76,7 +76,7 @@ app.get("/api/details/:name", async(req,res) => {
 
 const start = async () => {
   try {
-    await app.listen(3000)
+    await app.listen(process.env.PORT)
   } catch (err) {
     app.log.error(err)
     process.exit(1)
